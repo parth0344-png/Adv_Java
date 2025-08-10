@@ -32,6 +32,7 @@
 		<tbody>
 			<%
 			while (rs.next()) {
+				
 				int userId = rs.getInt("userId");
 				String firstName = rs.getString("firstName");
 

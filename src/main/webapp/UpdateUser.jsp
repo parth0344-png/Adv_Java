@@ -25,14 +25,21 @@
 				String email = rs.getString("email");
 				
 				String pass = rs.getString("password");
+				
+				String id = rs.getString("userId");
 			%>
-<form action="/UpdateUserController" method="Get">
+<form action="UpdateUserController" method="Get">
+    <label for="firstname">User Id:</label>
+    <input type="text" id="userId" name="userId" value="<%=id %>" required>
+    <br><br>
+
+
     <label for="firstname">First Name:</label>
-    <input type="text" id="firstname" name="firstname" value="<%=firstName %>" required>
+    <input type="text" id="firstName" name="firstName" value="<%=firstName %>" required>
     <br><br>
 
     <label for="lastname">Last Name:</label>
-    <input type="text" id="lastname" name="lastname" value="<%= lastName %>" required>
+    <input type="text" id="lastName" name="lastName" value="<%= lastName %>" required>
     <br><br>
 
     <label for="email">Email:</label>
@@ -43,7 +50,7 @@
     <input type="password" id="password" name="password" value="<%= pass %>>" required>
     <br><br>
 
-    <input type="Update" value="Register">
+    <input type="Submit" value="Register">
 </form>
 
 </body>
